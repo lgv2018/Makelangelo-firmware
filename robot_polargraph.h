@@ -9,8 +9,8 @@
 #if MACHINE_STYLE == POLARGRAPH
 
 #define MACHINE_STYLE_NAME       "POLARGRAPH"
-#define MACHINE_HARDWARE_VERSION 3  // If you have a makelangelo 3+
-//#define MACHINE_HARDWARE_VERSION 5  // If you have a makelangelo 5+
+//#define MACHINE_HARDWARE_VERSION 3  // If you have a makelangelo 3+
+#define MACHINE_HARDWARE_VERSION 5  // If you have a makelangelo 5+
 #define MACHINE_HAS_LIFTABLE_PEN
 
 #define SUBDIVIDE_LINES
@@ -26,15 +26,15 @@
 #define NUM_SERVOS           (1)
 #define NUM_TOOLS            (1)
 
-#define MAX_FEEDRATE         (20000.0)  // depends on timer interrupt & hardware
-#define MIN_FEEDRATE         (100)
-#define DEFAULT_FEEDRATE     (9000.0)
+#define MAX_FEEDRATE         (20000.0f)  // depends on timer interrupt & hardware
+#define MIN_FEEDRATE         (100.0f)
+#define DEFAULT_FEEDRATE     (9000.0f)
 
-#define MAX_ACCELERATION     (5000)
-#define MIN_ACCELERATION     (100)
-#define DEFAULT_ACCELERATION (2500)
+#define MAX_ACCELERATION     (5000.0f)
+#define MIN_ACCELERATION     (100.0f)
+#define DEFAULT_ACCELERATION (2500.0f)
 
-#define MAX_JERK             (5.0)
+#define MAX_JERK             (5.0f)
 
 
 #if MACHINE_HARDWARE_VERSION == 5
