@@ -1,5 +1,4 @@
-#ifndef ROBOT_DELTA_H
-#define ROBOT_DELTA_H
+#pragma once
 //------------------------------------------------------------------------------
 // Makelangelo - firmware for various robot kinematic models
 // dan@marginallycelver.com 2013-12-26
@@ -10,6 +9,7 @@
 
 #define MACHINE_STYLE_NAME           "DELTA"
 #define MACHINE_HARDWARE_VERSION     5
+
 
 // known machine configurations
 #define DELTA_STYLE_MARGINALLYCLEVER_V8  1
@@ -22,8 +22,7 @@
 
 // plan long moves as a set of submoves to increase accuracy.  Uncomment to turn this off.
 #define SUBDIVIDE_LINES
-// what is the maximum length of a subdivided line?
-#define SEGMENT_MAX_LENGTH_MM  (10)
+#define SEGMENTS_PER_SECOND (10)
 
 // servo angles for pen control
 #define PEN_UP_ANGLE         (90)
@@ -42,7 +41,6 @@
 
 #define MAX_JERK             (10.0)
 #define MAX_Z_JERK           (0.3)
-
 
 
 #if DELTA_STYLE  == DELTA_STYLE_MARGINALLYCLEVER_V8
@@ -74,8 +72,4 @@
 #define DELTA_HOME_DIRECTION     LOW  // LOW or HIGH
 #endif
 
-
-#endif  // #ifdef DELTA
-
-
-#endif  // #ifndef ROBOT_DELTA_H
+#endif  // MACHINE_STYLE == DELTA

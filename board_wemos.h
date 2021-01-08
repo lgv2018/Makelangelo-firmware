@@ -1,5 +1,4 @@
-#ifndef BOARD_WEMOS_H
-#define BOARD_WEMOS_H
+#pragma once
 //------------------------------------------------------------------------------
 // Makelangelo - firmware for various robot kinematic models
 // dan@marginallycelver.com 2013-12-26
@@ -23,11 +22,13 @@
 // TODO add more pin definitions
 #define MAX_MOTORS                (2)
 
+#define MOTOR_0_LETTER            'X'
 #define MOTOR_0_DIR_PIN           (3)
 #define MOTOR_0_STEP_PIN          (0)
 #define MOTOR_0_ENABLE_PIN        (6)
 #define MOTOR_0_LIMIT_SWITCH_PIN  (7)   /* X min */
 
+#define MOTOR_1_LETTER            'Y'
 #define MOTOR_1_DIR_PIN           (4)
 #define MOTOR_1_STEP_PIN          (1)
 #define MOTOR_1_ENABLE_PIN        (6)
@@ -40,8 +41,8 @@
 #define LIMIT_SWITCH_PIN_RIGHT    (MOTOR_1_LIMIT_SWITCH_PIN)
 
 #define HAS_WIFI
-#define WIFI_SSID_NAME "CSIS VAN #1"    // WiFi AP SSID Name
-#define WIFI_SSID_PASS "TDPJYGZEDH123"  // WiFi AP SSID Password
+#define WIFI_SSID_NAME ""  // WiFi AP SSID Name - put this in your local_config.h
+#define WIFI_SSID_PASS ""  // WiFi AP SSID Password - put this in your local_config.h
 
 #define CLOCK_FREQ            (80000000L)
 
@@ -49,5 +50,3 @@
 #undef HAS_LCD
 
 #endif // MOTHERBOARD == BOARD_WEMOS 
-
-#endif  // BOARD_WEMOS_H
